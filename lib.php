@@ -45,7 +45,16 @@ function atto_tutorials_strings_for_js() {
             'subcomponenttitle',
             'placeholdertexttwocolumns',
             'placeholdertextonecolumn',
-            'dialogtitle'
+            'templates_title',
+            'button_title',
+            'browserepositories',
+            'createlink',
+            'enterurl',
+            'entertext',
+            'openinnewwindow',
+            'pluginname',
+            'unlink'
+
         ],
         'atto_tutorials'
     );

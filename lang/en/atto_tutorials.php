@@ -36,10 +36,19 @@ $string['settings'] = 'tutorials (Atto)';
 $string['browse'] = 'Browse';
 $string['visible'] = 'Visible';
 $string['nothingtoinsert'] = 'Nothing to insert!';
-$string['dialogtitle'] = 'Select template';
+$string['templates_title'] = 'Select your template';
+$string['button_title'] = 'Make a button';
 $string['insert'] = 'Insert';
 $string['cancel'] = 'Cancel';
 $string['enabled_templates'] = 'Enabled templates:';
 $string['enabled_templates_desc'] = 'Which templates to show.';
 $string['tutorials:visible'] = 'Visible';
+
+$string['browserepositories'] = 'Browse repositories...';
+$string['createlink'] = 'Create link';
+$string['enterurl'] = 'Enter a URL';
+$string['entertext'] = 'Enter the button text';
+$string['openinnewwindow'] = 'Open in new window';
+$string['pluginname'] = 'Link';
+$string['unlink'] = 'Unlink';
 
