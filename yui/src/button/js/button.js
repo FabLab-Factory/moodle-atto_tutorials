@@ -113,8 +113,7 @@ var component_subcomponent_one_column_template =
 '</div>' +
     '<div class="tutorial clearfix-tutorial">' +
         '<section class="component">' +
-        '<br>' + 
-        '<p> </p>' +
+        '<br>' +
           '<h3>'+M.util.get_string('componenttitle', COMPONENTNAME)+'</h3>' +
           '<section class="subcomponent">' +
             '<h4>'+M.util.get_string('subcomponenttitle', COMPONENTNAME)+'</h4>' +
