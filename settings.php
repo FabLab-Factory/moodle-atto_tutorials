@@ -38,12 +38,16 @@ if ($ADMIN->fulltree) {
             'component_two_columns'   => 'checked',
             'component_subcomponent_two_columns'   => 'checked',
             'component_one_column' => 'checked',
-            'component_subcomponent_one_column' => 'checked'
+            'component_subcomponent_one_column' => 'checked',
+            'subcomponent_two_columns' => 'checked',
+            'subcomponent_one_column' => 'checked'
         ),
         array(
             'component_two_columns' => get_string('component_two_columns', 'atto_tutorials'),
             'component_subcomponent_two_columns' => get_string('component_subcomponent_two_columns', 'atto_tutorials'),
             'component_one_column' => get_string('component_one_column', 'atto_tutorials'),
-            'component_subcomponent_one_column' => get_string('component_subcomponent_one_column', 'atto_tutorials')
+            'component_subcomponent_one_column' => get_string('component_subcomponent_one_column', 'atto_tutorials'),
+            'subcomponent_two_columns' => get_string('subcomponent_two_columns', 'atto_tutorials'),
+            'subcomponent_one_column' => get_string('subcomponent_one_column', 'atto_tutorials')
         )));
 }
