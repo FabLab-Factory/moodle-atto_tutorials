@@ -38,7 +38,7 @@ a.tutorialstemplateicon {
 
 .tutorial {
   font-family: "Source Sans Pro", Arial, sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 1.5em;
   margin: 0;
   background-color: #f4f4f4;
@@ -52,12 +52,12 @@ a.tutorialstemplateicon {
 }
 @media only screen and (min-width: 768px) {
   .tutorial {
-    font-size: 0.9em;
+    font-size: 1em;
  }
 }
 @media only screen and (min-width: 992px) {
   .tutorial {
-    font-size: 0.9em;
+    font-size: 1em;
  }
 }
 .tutorial h1, .tutorial h2, .tutorial h3, .tutorial h4, .tutorial h5, .tutorial h6 {

@@ -84,12 +84,12 @@ var component_subcomponent_two_columns_template =
     '</div>';
 
 var subcomponent_two_columns_template =
-      '<br>' + 
-      '<section class="subcomponent">' +
-        '<h4>'+M.util.get_string('subcomponenttitle', COMPONENTNAME)+'</h4>' +
-        '<p class="max-2-columns">'+M.util.get_string('placeholdertexttwocolumns', COMPONENTNAME)+'</p>' +
-      '</section>' +
-      '<br>';
+'<br>' + 
+'<section class="subcomponent">' +
+  '<h4>'+M.util.get_string('subcomponenttitle', COMPONENTNAME)+'</h4>' +
+  '<p class="max-2-columns">'+M.util.get_string('placeholdertexttwocolumns', COMPONENTNAME)+'</p>' +
+'</section>' +
+'<br>';
 
 var component_one_column_template =
 '<div class="tutorial">' +

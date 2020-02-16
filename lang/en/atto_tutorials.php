@@ -47,7 +47,7 @@ $string['enabled_templates_desc'] = 'Which templates to show.';
 $string['tutorials:visible'] = 'Visible';
 
 $string['browserepositories'] = 'Browse repositories...';
-$string['createlink'] = 'Insert button';
+$string['createlink'] = 'Create link';
 $string['enterurl'] = 'Enter a URL';
 $string['entertext'] = 'Enter the button text';
 $string['openinnewwindow'] = 'Open in new window';
