@@ -72,13 +72,7 @@ a.tutorialstemplateicon {
 .tutorial address {
   font-style: italic;
 }
-.tutorial img {
-  zoom: 50%;
-}
-.tutorial p > code, .tutorial pre {
-  font-size: 0.7em;
-  word-wrap: break-word;
-}
+
 .tutorial > .h2-container {
   background-color: gold;
   padding: 3em 0;
@@ -308,13 +302,12 @@ a.tutorialstemplateicon {
   border: none;
 }
 .component > img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
-  display: block;
   margin: 0 auto;
 }
 .component ol, .component ul, .subcomponent ol, .subcomponent ul {
-  padding: 1em 1em 1em 2em;
+  padding: 0em 1em 1em 2em;
   position: relative;
   background-color: #fff;
 }
@@ -327,9 +320,7 @@ a.tutorialstemplateicon {
   margin-right: 1em;
 }
 .component p > img, .subcomponent p > img {
-  max-width: 100%;
   height: auto;
-  display: block;
   margin: 10px auto 0;
 }
 .subcomponent {
@@ -341,6 +332,11 @@ a.tutorialstemplateicon {
   border-radius: 0.4em;
   padding: 4px 0;
 }
+
+.subcomponent > img {
+  max-width: 50%;
+}
+
 @media only screen and (min-width: 768px) {
   .subcomponent {
     border-width: 3px;
@@ -497,6 +493,11 @@ a.tutorialstemplateicon {
   -webkit-column-count: 1;
   column-count: 1;
 }
+
+.tutorial .no-columns > img {
+  max-width: 50%;
+}
+
 @media only screen {
   .tutorial .max-2-columns {
     -webkit-column-count: 1;
