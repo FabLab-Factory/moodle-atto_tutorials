@@ -38,7 +38,7 @@ a.tutorialstemplateicon {
 
 .tutorial {
   font-family: "Source Sans Pro", Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 1.5em;
   margin: 0;
   background-color: #f4f4f4;
@@ -46,29 +46,48 @@ a.tutorialstemplateicon {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #282828;
+  padding-left: 20px; /* custom */
+  padding-right: 20px; /* custom */
 }
+
+.tutorial > section {
+  display: inline-block;
+}
+
 .tutorial > header > h1 {
   font-family: zag_boldregular, sans-serif;
 }
 @media only screen and (min-width: 768px) {
   .tutorial {
-    font-size: 1em;
+    font-size: 1.1em;
  }
 }
 @media only screen and (min-width: 992px) {
   .tutorial {
-    font-size: 1em;
+    font-size: 1.1em;
  }
 }
 .tutorial h1, .tutorial h2, .tutorial h3, .tutorial h4, .tutorial h5, .tutorial h6 {
   font-family: zag_regularregular, sans-serif;
 }
-.tutorial dd, .tutorial dl, .tutorial dt, .tutorial h1, .tutorial h2, .tutorial h3, .tutorial h4, .tutorial h5, .tutorial h6, .tutorial ol, .tutorial p, .tutorial ul {
+.tutorial dd, .tutorial dl, .tutorial dt, .tutorial h1, .tutorial h2, .tutorial h3, .tutorial h4, .tutorial h5, .tutorial h6, .tutorial ol {
   font-weight: 400;
   margin: 0;
   padding: 0;
   text-transform: none;
 }
+
+
+.tutorial p, .tutorial ul {
+  font-weight: 400;
+  margin: 0;
+  /* padding-left: 1em; */ /* custom */
+  /* padding-right: 1em; */ /* custom */
+  text-transform: none;
+  min-width: 50%; /* custom */
+  max-width: 100%; /* custom */
+}
+
 .tutorial address {
   font-style: italic;
 }
@@ -267,14 +286,16 @@ a.tutorialstemplateicon {
 }
 .component > p {
   background-color: #fff;
-  padding: 1em;
+  /* padding-left: 1em; */ /* custom */
+  /* padding-right: 1em; *//* custom */
   position: relative;
-  -webkit-box-shadow: 0 0 0 1px #1c1c1c;
-  box-shadow: 0 0 0 1px #1c1c1c;
+  /*-webkit-box-shadow: 0 0 0 1px #1c1c1c;
+  box-shadow: 0 0 0 1px #1c1c1c;*/
   -webkit-column-gap: 1.4em;
   column-gap: 1.4em;
   -webkit-column-rule: 1px outset #f4f4f4;
   column-rule: 1px outset #f4f4f4;
+  float: none; /* placing of images next to ul */
 }
 @media only screen {
   .component > p {
@@ -282,7 +303,7 @@ a.tutorialstemplateicon {
     column-count: 1;
  }
 }
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .component > p {
     -webkit-column-count: 2;
     column-count: 2;
@@ -292,10 +313,11 @@ a.tutorialstemplateicon {
   .component > p {
     -webkit-column-count: 3;
     column-count: 3;
-    -webkit-box-shadow: 0 0 0 2px #1c1c1c;
-    box-shadow: 0 0 0 2px #1c1c1c;
- }
-}
+     */
+    /* -webkit-box-shadow: 0 0 0 2px #1c1c1c;
+    box-shadow: 0 0 0 2px #1c1c1c; */
+ /* }
+} */
 .component pre, .subcomponent pre {
   margin: 0;
   background-color: #fff;
@@ -305,11 +327,16 @@ a.tutorialstemplateicon {
   max-width: 50%;
   height: auto;
   margin: 0 auto;
+  padding: 1em;
+  min-width: 50%;
+  background-color: #FFF;
 }
 .component ol, .component ul, .subcomponent ol, .subcomponent ul {
   padding: 0em 1em 1em 2em;
   position: relative;
   background-color: #fff;
+  display: inline-block;
+  float: none; /* placing of images next to ul */
 }
 .component h5, .component h6, .subcomponent h5, .subcomponent h6 {
   font-weight: 700;
@@ -323,6 +350,12 @@ a.tutorialstemplateicon {
   height: auto;
   margin: 10px auto 0;
 }
+
+.component .no-columns > p {
+  /* padding-left: 1em; */ /* custom */
+  /* padding-right: 1em; */ /* custom */
+  /* padding-top: 1em; */ /* custom */
+}
 .subcomponent {
   background-color: #fff;
   color: #1c1c1c;
@@ -334,7 +367,8 @@ a.tutorialstemplateicon {
 }
 
 .subcomponent > img {
-  max-width: 50%;
+  width: 50%; /* custom */
+  padding: 1em; /* custom */
 }
 
 @media only screen and (min-width: 768px) {
@@ -347,9 +381,12 @@ a.tutorialstemplateicon {
     border-width: 4px;
  }
 }
+/*
 .subcomponent > :nth-child(2) {
   padding-top: calc(1em - 4px);
 }
+*/
+
 .subcomponent > h4 {
   font-size: 1.4em;
   background-color: #1c1c1c;
@@ -372,11 +409,13 @@ a.tutorialstemplateicon {
  }
 }
 .subcomponent > p {
-  padding: 1em;
+  /* padding-left: 1em; */ /* custom */
+  /* padding-right: 1em; */ /* custom */
   position: relative;
   background-color: #fff;
   -webkit-column-rule: 1px outset #f4f4f4;
   column-rule: 1px outset #f4f4f4;
+  float: none; /* placing of images next to ul */
 }
 @media only screen {
   .subcomponent > p {
@@ -384,17 +423,16 @@ a.tutorialstemplateicon {
     column-count: 1;
  }
 }
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .subcomponent > p {
     -webkit-column-count: 2;
     column-count: 2;
  }
-}
+} */
 .subcomponent > p:before {
   font-size: 2em;
 }
 .subcomponent > div {
-  padding: 1em;
   position: relative;
   background-color: #fff;
   -webkit-column-rule: 1px outset #f4f4f4;
@@ -406,12 +444,12 @@ a.tutorialstemplateicon {
     column-count: 1;
  }
 }
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .subcomponent > div {
     -webkit-column-count: 2;
     column-count: 2;
  }
-}
+} */
 .subcomponent > div:before {
   font-size: 2em;
 }
@@ -492,10 +530,14 @@ a.tutorialstemplateicon {
 .tutorial .no-columns {
   -webkit-column-count: 1;
   column-count: 1;
+  background-color: #FFF; /* custom */
+  padding: 1em; /* custom */
 }
 
+
 .tutorial .no-columns > img {
-  max-width: 50%;
+  max-width: 50%; /* custom */
+  padding: 1em; /* custom */
 }
 
 @media only screen {
@@ -695,6 +737,6 @@ a.tutorialstemplateicon {
   padding-bottom: 0.3em;
 }
 
-.column-carousel {
-   width: 50%;
+.white-background {
+  background-color: #FFF;
 }

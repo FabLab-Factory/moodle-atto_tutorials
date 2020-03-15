@@ -45,51 +45,51 @@ var CSS = {
   URLINPUT: 'atto_tutorials_urlentry',
 };
 
-// The extra div and paragraph tags are there to easily insert additional content before or after the tutorial components.
-var component_two_columns_template =
-'<div class="tutorial">' +
-    '<br>' +
-    '<p> </p>' +
-'</div>' +
-  '<div class="tutorial clearfix-tutorial">' +
-        '<section class="component">' +
-          '<h3>'+M.util.get_string('componenttitle', COMPONENTNAME)+'</h3>' +
-          '<p class="max-2-columns">'+M.util.get_string('placeholdertexttwocolumns', COMPONENTNAME)+'</p>' +
-        '</section>' +
-  '</div>' +
-  '<div class="tutorial">' +
-  '<br>' +
-      '<p> </p>' +
-  '</div>';
+// // The extra div and paragraph tags are there to easily insert additional content before or after the tutorial components.
+// var component_two_columns_template =
+// '<div class="tutorial">' +
+//     '<br>' +
+//     '<p> </p>' +
+// '</div>' +
+//   '<div class="tutorial clearfix-tutorial">' +
+//         '<section class="component">' +
+//           '<h3>'+M.util.get_string('componenttitle', COMPONENTNAME)+'</h3>' +
+//           '<p class="max-2-columns">'+M.util.get_string('placeholdertexttwocolumns', COMPONENTNAME)+'</p>' +
+//         '</section>' +
+//   '</div>' +
+//   '<div class="tutorial">' +
+//   '<br>' +
+//       '<p> </p>' +
+//   '</div>';
 
-var component_subcomponent_two_columns_template =
-'<div class="tutorial">' +
-    '<br>' +
-    '<p> </p>' +
-'</div>' +
-    '<div class="tutorial clearfix-tutorial">' +
-        '<section class="component">' +
-          '<h3>'+M.util.get_string('componenttitle', COMPONENTNAME)+'</h3>' +
-          '<br>' + 
-          '<section class="subcomponent">' +
-            '<h4>'+M.util.get_string('subcomponenttitle', COMPONENTNAME)+'</h4>' +
-            '<p class="max-2-columns">'+M.util.get_string('placeholdertexttwocolumns', COMPONENTNAME)+'</p>' +
-          '</section>' +
-          '<br>' + 
-        '</section>' +
-    '</div>' +
-    '<div class="tutorial">' +
-    '<br>' +
-        '<p> </p>' +
-    '</div>';
+// var component_subcomponent_two_columns_template =
+// '<div class="tutorial">' +
+//     '<br>' +
+//     '<p> </p>' +
+// '</div>' +
+//     '<div class="tutorial clearfix-tutorial">' +
+//         '<section class="component">' +
+//           '<h3>'+M.util.get_string('componenttitle', COMPONENTNAME)+'</h3>' +
+//           '<br>' + 
+//           '<section class="subcomponent">' +
+//             '<h4>'+M.util.get_string('subcomponenttitle', COMPONENTNAME)+'</h4>' +
+//             '<p class="max-2-columns">'+M.util.get_string('placeholdertexttwocolumns', COMPONENTNAME)+'</p>' +
+//           '</section>' +
+//           '<br>' + 
+//         '</section>' +
+//     '</div>' +
+//     '<div class="tutorial">' +
+//     '<br>' +
+//         '<p> </p>' +
+//     '</div>';
 
-var subcomponent_two_columns_template =
-'<br>' + 
-'<section class="subcomponent">' +
-  '<h4>'+M.util.get_string('subcomponenttitle', COMPONENTNAME)+'</h4>' +
-  '<p class="max-2-columns">'+M.util.get_string('placeholdertexttwocolumns', COMPONENTNAME)+'</p>' +
-'</section>' +
-'<br>';
+// var subcomponent_two_columns_template =
+// '<br>' + 
+// '<section class="subcomponent">' +
+//   '<h4>'+M.util.get_string('subcomponenttitle', COMPONENTNAME)+'</h4>' +
+//   '<p class="max-2-columns">'+M.util.get_string('placeholdertexttwocolumns', COMPONENTNAME)+'</p>' +
+// '</section>' +
+// '<br>';
 
 var component_one_column_template =
 '<div class="tutorial">' +
@@ -99,7 +99,9 @@ var component_one_column_template =
     '<div class="tutorial clearfix-tutorial">' +
         '<section class="component">' +
           '<h3>'+M.util.get_string('componenttitle', COMPONENTNAME)+'</h3>' +
-          '<p class="no-columns">'+M.util.get_string('placeholdertextonecolumn', COMPONENTNAME)+'</p>' +
+          '<div class="no-columns white-background">' +
+            '<p>'+M.util.get_string('placeholdertextonecolumn', COMPONENTNAME)+'</p>' +
+          '<div>' +
         '</section>' +
   '</div>' +
   '<div class="tutorial">' +
@@ -117,7 +119,9 @@ var component_subcomponent_one_column_template =
           '<h3>'+M.util.get_string('componenttitle', COMPONENTNAME)+'</h3>' +
           '<section class="subcomponent">' +
             '<h4>'+M.util.get_string('subcomponenttitle', COMPONENTNAME)+'</h4>' +
-            '<p class="no-columns">'+M.util.get_string('placeholdertextonecolumn', COMPONENTNAME)+'</p>' +
+            '<div class="no-columns white-background">' +
+              '<p>'+M.util.get_string('placeholdertextonecolumn', COMPONENTNAME)+'</p>' +
+            '</div>' +
           '</section>' +
           '<br>' +
         '</section>' +
@@ -131,17 +135,19 @@ var subcomponent_one_column_template =
     '<br>' + 
     '<section class="subcomponent">' +
       '<h4>'+M.util.get_string('subcomponenttitle', COMPONENTNAME)+'</h4>' +
-      '<p class="no-columns">'+M.util.get_string('placeholdertextonecolumn', COMPONENTNAME)+'</p>' +
+      '<div class="no-columns white-background">' +
+        '<p>'+M.util.get_string('placeholdertextonecolumn', COMPONENTNAME)+'</p>' +
+      '</div>' +
     '</section>' +
     '<br>';
 
 var templates = { 
-    component_two_columns: { template: component_two_columns_template, icon: "component_two_columns", 
-      title: M.util.get_string('component_two_columns', COMPONENTNAME) },
-    component_subcomponent_two_columns: { template: component_subcomponent_two_columns_template, icon: "component_subcomponent_two_columns", 
-      title: M.util.get_string('component_subcomponent_two_columns', COMPONENTNAME) },
-    subcomponent_two_columns: { template: subcomponent_two_columns_template, icon: "subcomponent_two_columns",
-      title: M.util.get_string('subcomponent_two_columns', COMPONENTNAME) },
+    // component_two_columns: { template: component_two_columns_template, icon: "component_two_columns", 
+    //   title: M.util.get_string('component_two_columns', COMPONENTNAME) },
+    // component_subcomponent_two_columns: { template: component_subcomponent_two_columns_template, icon: "component_subcomponent_two_columns", 
+    //   title: M.util.get_string('component_subcomponent_two_columns', COMPONENTNAME) },
+    // subcomponent_two_columns: { template: subcomponent_two_columns_template, icon: "subcomponent_two_columns",
+    //   title: M.util.get_string('subcomponent_two_columns', COMPONENTNAME) },
     component_one_column: { template: component_one_column_template, icon: "component_one_column", 
       title: M.util.get_string('component_one_column', COMPONENTNAME) },
     component_subcomponent_one_column: { template: component_subcomponent_one_column_template, icon: "component_subcomponent_one_column", 
@@ -533,9 +539,10 @@ Y.namespace('M.atto_tutorials').Button = Y.Base.create('button', Y.M.editor_atto
 
 }, { ATTRS: {
   enabled_templates: {
-    values: ['component_two_columns',
-        'component_subcomponent_two_columns',
-        'subcomponent_two_columns',
+    values: [
+        // 'component_two_columns',
+        // 'component_subcomponent_two_columns',
+        // 'subcomponent_two_columns',
         'component_one_column',
         'component_subcomponent_one_column',
         'subcomponent_one_column']

@@ -51,6 +51,5 @@ $string['createlink'] = 'Create link';
 $string['enterurl'] = 'Enter a URL';
 $string['entertext'] = 'Enter the button text';
 $string['openinnewwindow'] = 'Open in new window';
-$string['pluginname'] = 'Link';
 $string['unlink'] = 'Unlink';
 
