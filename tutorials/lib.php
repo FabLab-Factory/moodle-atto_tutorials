@@ -34,12 +34,14 @@ function atto_tutorials_strings_for_js() {
 
     $PAGE->requires->strings_for_js(
         [
+            'description',
             'insert',
             'cancel',
             'component_two_columns',
             'component_subcomponent_two_columns',
             'component_one_column',
             'component_subcomponent_one_column',
+            'subcomponent_one_column',
             'componenttitle',
             'subcomponenttitle',
             'subcomponenttitle',

@@ -22,12 +22,13 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+$string['description'] = 'Select a template to insert in your text area, you can customize the text afterwards';
 $string['component_two_columns'] = 'Component with 2-column text';
 $string['component_subcomponent_two_columns'] = 'Component with subcomponent and 2-column text';
-$string['component_one_column'] = 'Component with 1-column text';
-$string['component_subcomponent_one_column'] = 'Component with subcomponent and 1-column text';
+$string['component_one_column'] = 'Component';
+$string['component_subcomponent_one_column'] = 'Component with subcomponent';
 $string['subcomponent_two_columns'] = 'Subcomponent with 2-column text';
-$string['subcomponent_one_column'] = 'Subcomponent with 1-column text';
+$string['subcomponent_one_column'] = 'Subcomponent (use with component)';
 $string['componenttitle'] = 'Component title';
 $string['subcomponenttitle'] = 'Subcomponent title';
 $string['placeholdertexttwocolumns'] = 'This is the component text in two columns.';

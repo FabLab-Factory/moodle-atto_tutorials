@@ -41,13 +41,11 @@ a.tutorialstemplateicon {
   font-size: 1.1em;
   line-height: 1.5em;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   width: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: #282828;
-  padding-left: 20px; /* custom */
-  padding-right: 20px; /* custom */
 }
 
 .tutorial > section {
@@ -78,14 +76,15 @@ a.tutorialstemplateicon {
 }
 
 
-.tutorial p, .tutorial ul {
+.tutorial p, .tutorial ul, .tutorial ol {
   font-weight: 400;
   margin: 0;
   /* padding-left: 1em; */ /* custom */
   /* padding-right: 1em; */ /* custom */
   text-transform: none;
-  min-width: 50%; /* custom */
+  min-width: 30%; /* custom */
   max-width: 100%; /* custom */
+  font-size: 1.1em;
 }
 
 .tutorial address {
@@ -335,8 +334,11 @@ a.tutorialstemplateicon {
   padding: 0em 1em 1em 2em;
   position: relative;
   background-color: #fff;
-  display: inline-block;
-  float: none; /* placing of images next to ul */
+  /* display: inline-block;
+  float: none; */ /* placing of images next to ul */
+  float: left;
+  min-width: 48%;
+  max-width: 100%;
 }
 .component h5, .component h6, .subcomponent h5, .subcomponent h6 {
   font-weight: 700;

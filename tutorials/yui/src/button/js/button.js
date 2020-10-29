@@ -1,5 +1,3 @@
-YUI.add('moodle-atto_tutorials-button', function (Y, NAME) {
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -205,13 +203,15 @@ Y.namespace('M.atto_tutorials').Button = Y.Base.create('button', Y.M.editor_atto
     if(TEMPLATE === ""){
       TEMPLATE +=
       '<form class="atto_form">' +
-      '<div id="{{elementid}}_{{innerform}}" class="mdl-align">';
+      '<div id="{{elementid}}_{{innerform}}" class="">' + // class was mdl-align
+      '<p>{{get_string "description" component}}</p>';
       for(var t in templates) {
         if(contains(this.get('enabled_templates'),t)) {
           TEMPLATE += '<a class="tutorialstemplateicon {{CSS.INPUTSUBMIT}}" alt="' + templates[t].title +  '" title="' +
                       templates[t].title + '" data-template="'+ t + '">' +
                           '<img src="'+ M.util.image_url("ed/" + templates[t].icon,"atto_tutorials") + '"/>' +
-                      '</a>';
+                      '</a>' +
+                      templates[t].title + '<br>';
         }
       }
 
@@ -381,34 +381,33 @@ Y.namespace('M.atto_tutorials').Button = Y.Base.create('button', Y.M.editor_atto
 
 
   /** Link helper functions */
+  /** 
+    * Update the dialogue after a link was selected in the File Picker.
+    *
+    * @method _filepickerCallback
+    * @param {object} params The parameters provided by the filepicker
+    * containing information about the link.
+    * @private
+    */
+  _filepickerCallback: function(params) {
+    this.getDialogue()
+            .set('focusAfterHide', null)
+            .hide();
 
-  /**
-     * Update the dialogue after a link was selected in the File Picker.
-     *
-     * @method _filepickerCallback
-     * @param {object} params The parameters provided by the filepicker
-     * containing information about the link.
-     * @private
-     */
-    _filepickerCallback: function(params) {
-      this.getDialogue()
-              .set('focusAfterHide', null)
-              .hide();
+    if (params.url !== '') {
 
-      if (params.url !== '') {
+      var input_text,
+      value_text;
 
-        var input_text,
-        value_text;
+      input_text = this._content.one('.atto_button_text');
+      value_text = input_text.get('value');
 
-        input_text = this._content.one('.atto_button_text');
-        value_text = input_text.get('value');
+        // Add the link.
+        this._setLinkOnSelection(params.url, value_text);
 
-          // Add the link.
-          this._setLinkOnSelection(params.url, value_text);
-
-          // And mark the text area as updated.
-          this.markUpdated();
-      }
+        // And mark the text area as updated.
+        this.markUpdated();
+    }
   },
 
   /**
@@ -469,6 +468,7 @@ Y.namespace('M.atto_tutorials').Button = Y.Base.create('button', Y.M.editor_atto
       host.setSelection(this._currentSelection);
 
       if (this._currentSelection[0].collapsed) {
+
           // Firefox cannot add links when the selection is empty so we will add it manually.
           link = Y.Node.create('<a class="download-button">' + button_text + '</a>');
           link.setAttribute('href', url);
@@ -551,6 +551,3 @@ Y.namespace('M.atto_tutorials').Button = Y.Base.create('button', Y.M.editor_atto
   }
 }
    });
-
-
-}, '@VERSION@', {"requires": ["moodle-editor_atto-plugin"]});
